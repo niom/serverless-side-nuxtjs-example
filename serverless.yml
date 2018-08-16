@@ -14,8 +14,11 @@ functions:
 
 plugins:
   - serverless-apigw-binary
+  - serverless-offline
  
 custom:
   apigwBinary:
     types:
       - '*/*'
+  serverless-offline:
+    port: 4000
