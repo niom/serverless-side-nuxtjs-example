@@ -2,6 +2,10 @@
   <div class="indexMargin">
     <h1>This is the Front Page.</h1>
     <h3>The chosen one is called {{ chosenOne }}</h3>
+    <button v-on:click="showAlert">Show alert</button>
+    <button v-on:click="counter += 1">Add 1</button>
+    <p>The button above has been clicked {{ counter }} times.</p>
+
   </div>
 </template>
 
@@ -19,7 +23,16 @@
         return this.name || 'anon'
       }
     },
-
+    data: function() {
+      return {
+        counter: 1,
+      }
+    },
+    methods: {
+      showAlert: function() {
+        alert("Button worked");
+      },
+    },
     head: {
       link: [
         {
